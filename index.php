@@ -25,6 +25,15 @@
                 <button @click="callApi" class="btn btn-primary">VAI</button>
             </div>
         </div>
+        <div class="container-lg d-flex flex-column">
+            <div>
+                <ul>
+                <template v-for="task in listaMounted" >
+                    <li class="text-warning">{{task.task}}</li>
+                </template>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="./main.js"></script>
 </body>

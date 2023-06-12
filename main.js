@@ -5,7 +5,8 @@ createApp({
         return {
             task: "ciao",
             APIurl: "API.php",
-            lista: []
+            lista: [],
+            listaMounted: [],
         }
     },
     methods: {
@@ -17,7 +18,11 @@ createApp({
         }
     },
     mounted() {
-      console.log(this.task)
+      console.log(this.task),
+      axios.get(this.APIurl).then((risposta) => {
+        this.listaMounted = risposta.data;
+        console.log("Risposta al mounted", risposta.data)
+    })
       
     }
 }).mount('#app')
