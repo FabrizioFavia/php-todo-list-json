@@ -1,18 +1,1 @@
-[
-    {
-        "task":"Fare la spesa",
-        "done": false   
-    },
-    {
-        "task":"Andare in palestra",
-        "done": false   
-    },
-    {
-        "task":"Fare lezione",
-        "done": false   
-    },
-    {
-        "task":"Acquistare una pianta",
-        "done": false   
-    }
-]
+[{"task":"Fare la spesa","done":false},{"task":"Andare in palestra","done":false},{"task":"Fare lezione","done":false},{"task":"Acquistare una pianta","done":false},{"task":"Vai al compleanno di Gabriella","done":false},{"task":"pipoo","done":"false"}]

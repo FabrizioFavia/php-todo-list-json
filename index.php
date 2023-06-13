@@ -14,16 +14,30 @@
 
 <body>
     <div id="app">
-        <div class="container-lg d-flex flex-column">
-            <div>
-                <ul>
+    <div class="mainContainer pt-3 d-flex flex-column align-items-center">
+            <h1>To-Do List</h1>
+            <div class="todoListContainer p-3">
+                <div class="d-flex align-items-center  justify-content-between" >
+                    <input name="task" class="rounded border border-dark ps-2"
+                        type="text" placeholder="Aggiungi Task" v-model="task">
+                        <button class="btn btn-primary ms-3 p-1" @click="callApi()">Aggiungi Task</button>
+
+                    <button class="btn btn-primary ms-3 p-1" @click="addTask()">Aggiungi Task 2</button>
+                </div>
+                <ul class="mt-3 ps-0">
                     <template v-for="(task, i) in lista">
-                        <li @click="changeTaskState(task)" :class="task.done==true ? 'done' : '' ">{{task.task}}</li>
+                        <div class="d-flex align-items-center justify-content-between mt-3 line">
+                            <div>
+                                <li :class="task.done == true ? `done` : ``" class="styleNone"
+                                    @click="changeTaskState(task)">{{task.task}}</li>
+                            </div>
+                            <div>
+                                <button class="btn btn-danger p-1 ms-3 ps-2 pe-2 h-75">X</button>
+                            </div>
+                        </div>
                     </template>
                 </ul>
-            </div>
-            <div>
-                <button @click="callApi" class="btn btn-primary">VAI</button>
+
             </div>
         </div>
     </div>
