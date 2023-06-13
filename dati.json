@@ -1,0 +1,18 @@
+[
+    {
+        "task":"Fare la spesa",
+        "done": false   
+    },
+    {
+        "task":"Andare in palestra",
+        "done": false   
+    },
+    {
+        "task":"Fare lezione",
+        "done": false   
+    },
+    {
+        "task":"Acquistare una pianta",
+        "done": false   
+    }
+]

@@ -3,10 +3,9 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            task: "ciao",
             APIurl: "API.php",
             lista: [],
-            listaMounted: [],
+            selectedTask: null,
         }
     },
     methods: {
@@ -15,14 +14,12 @@ createApp({
             this.lista = risposta.data;
             console.log(risposta.data)
         })
-        }
+        },
+        changeTaskState(task){
+            task.done = !task.done 
+        },
     },
     mounted() {
-      console.log(this.task),
-      axios.get(this.APIurl).then((risposta) => {
-        this.listaMounted = risposta.data;
-        console.log("Risposta al mounted", risposta.data)
-    })
       
     }
 }).mount('#app')
