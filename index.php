@@ -18,7 +18,7 @@
             <div>
                 <ul>
                     <template v-for="(task, i) in lista">
-                        <li @click="changeTask(task)" :class="task.done==true ? 'done' : '' ">{{task.task}}</li>
+                        <li @click="changeTaskState(task)" :class="task.done==true ? 'done' : '' ">{{task.task}}</li>
                     </template>
                 </ul>
             </div>
